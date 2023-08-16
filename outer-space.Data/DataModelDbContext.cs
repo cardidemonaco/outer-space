@@ -9,11 +9,11 @@ namespace outer_space.Data
         //To update the database (make sure blank "outer-space" database created first)
         //  Open View > Package Manager Console
 
-        //dotnet ef migrations add Migration0**-DESCRIPTION --project outer-space.Data --context DataModelDbContext --startup-project outer-space.WebApp (updates Project)
-        //dotnet ef database update --project outer-space.Data.Default --context DataModelDbContext --startup-project outer-space.WebApp (updates Database)
+        //dotnet ef migrations add Migration0**-DESCRIPTION --project outer-space.Data --context DataModelDbContext --startup-project outer-space.Web (updates Project)
+        //dotnet ef database update --project outer-space.Data --context DataModelDbContext --startup-project outer-space.Web (updates Database)
 
-        //dotnet ef database update --project outer-space.Data.Default --context DataModelDbContext --startup-project outer-space.WebApp [MigrationName]
-        //dotnet ef migrations remove --project outer-space.Data.Default --context DataModelDbContext --startup-project outer-space.WebApp (removes latest migration)
+        //dotnet ef database update --project outer-space.Data --context DataModelDbContext --startup-project outer-space.Web [MigrationName]
+        //dotnet ef migrations remove --project outer-space.Data --context DataModelDbContext --startup-project outer-space.Web (removes latest migration)
 
         public IConfiguration Configuration { get; }
 
