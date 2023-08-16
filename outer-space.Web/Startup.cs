@@ -74,24 +74,24 @@ namespace outer_space.Web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-                app.UseDeveloperExceptionPage();
-            else
-                app.UseExceptionHandler("/Error");
+            //if (env.IsDevelopment())
+            //    app.UseDeveloperExceptionPage();
+            //else
+            //    app.UseExceptionHandler("/Error");
 
-            app.UseHsts(); //The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+            //app.UseHsts(); //The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
 
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
-            app.UseAuthentication(); //ASP.NET authentication users/roles
-            app.UseCookiePolicy();
+            //app.UseHttpsRedirection();
+            //app.UseStaticFiles();
+            //app.UseAuthentication(); //ASP.NET authentication users/roles
+            //app.UseCookiePolicy();
 
-            app.UseRouting();
-            app.UseAuthorization(); //ASP.NET authentication users/roles (need this line also)
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapRazorPages();
-            });
+            //app.UseRouting();
+            //app.UseAuthorization(); //ASP.NET authentication users/roles (need this line also)
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapRazorPages();
+            //});
         }
     }
 }

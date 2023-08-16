@@ -1,0 +1,31 @@
+﻿@page
+@model outer_space.Web.Pages.Galaxies.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Galaxy</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Galaxy.GalaxyName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Galaxy.GalaxyName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Galaxy.GalaxyDescription)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Galaxy.GalaxyDescription)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Galaxy?.GalaxyID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
