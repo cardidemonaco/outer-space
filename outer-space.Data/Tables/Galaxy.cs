@@ -5,6 +5,6 @@
         public int GalaxyID { get; set; }
         public string GalaxyName { get; set; }
         public string GalaxyDescription { get; set;}
-
+        public int GalaxyDiameterInParsecs { get; set; }
     }
 }
