@@ -19,6 +19,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Galaxy[0].GalaxyDescription)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Galaxy[0].GalaxyDiameterInParsecs)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -32,9 +35,12 @@
                 @Html.DisplayFor(modelItem => item.GalaxyDescription)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.GalaxyID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.GalaxyID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.GalaxyID">Delete</a>
+                @Html.DisplayFor(modelItem => item.GalaxyDiameterInParsecs)
+            </td>
+            <td>
+                <a class="btn btn-primary" asp-page="./Edit" asp-route-id="@item.GalaxyID">Edit</a> 
+                <a class="btn btn-secondary" asp-page="./Details" asp-route-id="@item.GalaxyID">Details</a> 
+                <a class="btn btn-danger" asp-page="./Delete" asp-route-id="@item.GalaxyID">Delete</a>
             </td>
         </tr>
 }
