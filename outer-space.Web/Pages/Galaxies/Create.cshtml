@@ -24,6 +24,11 @@
                 <span asp-validation-for="Galaxy.GalaxyDescription" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Galaxy.GalaxyDiameterInParsecs" class="control-label"></label>
+                <input asp-for="Galaxy.GalaxyDiameterInParsecs" class="form-control" />
+                <span asp-validation-for="Galaxy.GalaxyDiameterInParsecs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
