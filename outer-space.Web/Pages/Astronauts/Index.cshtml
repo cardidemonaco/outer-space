@@ -1,0 +1,54 @@
+﻿@page
+@model outer_space.Web.Pages.Astronauts.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Astronaut[0].AstronautNameFirst)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Astronaut[0].AstronautNameLast)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Astronaut[0].AstronautBirthDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Astronaut[0].AstornautDeathDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Astronaut) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AstronautNameFirst)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AstronautNameLast)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AstronautBirthDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AstornautDeathDate)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.AstronautID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.AstronautID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.AstronautID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

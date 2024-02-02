@@ -1,0 +1,37 @@
+﻿@page
+@model outer_space.Web.Pages.MissionAstronauts.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>MissionAstronaut</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MissionAstronaut.MissionAstronautRole)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MissionAstronaut.MissionAstronautRole)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MissionAstronaut.Mission)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MissionAstronaut.Mission.MissionName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MissionAstronaut.Astronaut)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MissionAstronaut.Astronaut.AstronautNameFirst)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-page="./Index">Back to List</a>
+</div>

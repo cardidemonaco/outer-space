@@ -12,10 +12,11 @@ namespace outer_space.Data.Tables
     {
         public int MissionID { get; set; }
         public int AstronautID { get; set; }
+        [Display(Name = "Role")]
         public string MissionAstronautRole { get; set; } //What was the astronaut's role on this mission?
 
         //Joins
-        public Mission Mission { get; set; }
-        public Astronaut Astronaut { get; set; }
+        public Mission? Mission { get; set; }
+        public Astronaut? Astronaut { get; set; }
     }
 }

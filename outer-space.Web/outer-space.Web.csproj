@@ -24,8 +24,4 @@
     <ProjectReference Include="..\outer-space.Data\outer-space.Data.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\Astronauts\" />
-  </ItemGroup>
-
 </Project>
