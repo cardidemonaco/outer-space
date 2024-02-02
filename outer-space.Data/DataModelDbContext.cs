@@ -46,25 +46,11 @@ namespace outer_space.Data
             mb.Entity<MissionAstronaut>()
                 .HasKey(k => new { k.MissionID, k.AstronautID });
 
-
-
             //=======================//
             // navigation Properties //
             //=======================//
-            //mb.Entity<Mission>()
-            //    .HasMany(e => e.Astronauts)
-            //    .WithMany(e => e.Missions)
-            //.UsingEntity("MissionAstronauts");
+            //...
 
-            //mb.Entity<Astronaut>()
-            //    .HasMany(e => e.Missions)
-            //    .WithMany(e => e.Astronauts)
-            //    .UsingEntity("MissionAstronauts");
-
-     
-             
-
-      
             //===========//
             // seed data //
             //===========//
