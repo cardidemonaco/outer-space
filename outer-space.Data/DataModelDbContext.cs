@@ -39,14 +39,16 @@ namespace outer_space.Data
 
         protected override void OnModelCreating(ModelBuilder mb)
         {
-            //=======================//
-            // navigation Properties //
-            //=======================//
-            //...
 
             //======//
             // keys //
             //======//
+            mb.Entity<MissionAstronaut>()
+                .HasKey(k => new { k.MissionID, k.AstronautID });
+
+            //=======================//
+            // navigation Properties //
+            //=======================//
             //...
 
             //===========//
@@ -58,6 +60,15 @@ namespace outer_space.Data
         //========//
         // tables //
         //========//
+
+        //This is what creates the context connection in the code
+        //  if a table is down below as a DbSet, _context.Table can be called
+
+        public virtual DbSet<Astronaut> Astronauts { get; set; }
         public virtual DbSet<Galaxy> Galaxies { get; set; }
+        public virtual DbSet<Mission> Missions { get; set; }
+
+        //Join tables
+        public virtual DbSet<MissionAstronaut> MissionAstronauts { get; set; }
     }
 }

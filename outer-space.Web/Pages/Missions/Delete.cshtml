@@ -1,0 +1,40 @@
+﻿@page
+@model outer_space.Web.Pages.Missions.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Mission</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mission.MissionName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mission.MissionName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mission.MissionDateStart)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mission.MissionDateStart)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mission.MissionDateEnd)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mission.MissionDateEnd)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Mission.MissionID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

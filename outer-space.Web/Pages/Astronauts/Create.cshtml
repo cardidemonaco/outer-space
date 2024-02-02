@@ -1,0 +1,49 @@
+﻿@page
+@model outer_space.Web.Pages.Astronauts.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Astronaut</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Astronaut.AstronautNameFirst" class="control-label"></label>
+                <input asp-for="Astronaut.AstronautNameFirst" class="form-control" />
+                <span asp-validation-for="Astronaut.AstronautNameFirst" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Astronaut.AstronautNameLast" class="control-label"></label>
+                <input asp-for="Astronaut.AstronautNameLast" class="form-control" />
+                <span asp-validation-for="Astronaut.AstronautNameLast" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Astronaut.AstronautBirthDate" class="control-label"></label>
+                <input asp-for="Astronaut.AstronautBirthDate" class="form-control" />
+                <span asp-validation-for="Astronaut.AstronautBirthDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Astronaut.AstornautDeathDate" class="control-label"></label>
+                <input asp-for="Astronaut.AstornautDeathDate" class="form-control" />
+                <span asp-validation-for="Astronaut.AstornautDeathDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

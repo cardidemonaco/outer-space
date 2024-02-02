@@ -1,0 +1,48 @@
+﻿@page
+@model outer_space.Web.Pages.Missions.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Mission[0].MissionName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mission[0].MissionDateStart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mission[0].MissionDateEnd)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Mission) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MissionName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MissionDateStart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MissionDateEnd)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.MissionID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.MissionID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.MissionID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

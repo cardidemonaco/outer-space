@@ -1,0 +1,37 @@
+﻿@page
+@model outer_space.Web.Pages.Missions.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Mission</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mission.MissionName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mission.MissionName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mission.MissionDateStart)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mission.MissionDateStart)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mission.MissionDateEnd)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mission.MissionDateEnd)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Mission?.MissionID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
